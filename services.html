@@ -4,6 +4,90 @@
   <meta charset="UTF-8">
   <title>Services – Selecta</title>
   <link rel="stylesheet" href="css/styles.css">
+  
+  <style>
+    /* 1. Background Color Change */
+    body {
+      background-color: #f8f9fa; /* A clean, modern off-white */
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+    }
+
+    /* Navigation Styling */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 5%;
+      align-items: center;
+      background: #fff;
+    }
+    nav ul { display: flex; list-style: none; gap: 20px; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+    .enquire { background: #000; color: #fff !important; padding: 8px 16px; border-radius: 4px; }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+    /* 2. Back Button Styling */
+    .back-container {
+      max-width: 1100px;
+      margin: 20px auto 0;
+      padding: 0 5%;
+    }
+    .back-btn {
+      background: none;
+      border: 1px solid #333;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background: #333;
+      color: #fff;
+    }
+
+    /* 3. Services Grid Section */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 5% 80px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #000;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .service-card p {
+      line-height: 1.6;
+      color: #555;
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -16,12 +100,52 @@
   </ul>
 </nav>
 
+<div class="back-container">
+  <button onclick="goBack()" class="back-btn">← Back</button>
+</div>
+
 <section class="hero">
-  <h1>Services</h1>
-  <p>
-    <!-- Leave blank or add later -->
-  </p>
+  <h1>Our Services</h1>
+  <p>Bespoke audio solutions tailored to your space.</p>
 </section>
+
+<section class="services-grid">
+  <div class="service-card">
+    <h3>Signature Sound Design</h3>
+    <p>We create custom soundtracks that define the personality of your space. Whether you are looking for high-energy beats or sophisticated lounge tones, we build a signature sound that makes your business instantly recognizable.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Tailored Atmosphere Curation</h3>
+    <p>Music is the invisible architecture of a room. We curate bespoke playlists designed to enhance the atmosphere of any environment, ensuring the mood is always perfect for your guests.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Brand Identity & Audio Strategy</h3>
+    <p>We help brands find their voice. By aligning your audio choices with your brand values, we create a cohesive sensory experience that builds a deeper emotional connection with your audience.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Dynamic Day-Parting</h3>
+    <p>Your space changes from morning to night, and your music should too. Our services include smart scheduling that automatically shifts the tempo to match the natural flow of your business hours.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Concept-Led Playlisting</h3>
+    <p>For specific projects, launches, or events, we offer concept-led curation. We dive into the theme of your project to provide a hand-picked selection of tracks that tell a story.</p>
+  </div>
+
+  <div class="service-card">
+    <h3>Seamless Music Management</h3>
+    <p>Keep your sound fresh without the stress. We provide ongoing updates and expert oversight of your music library, ensuring your playlists stay contemporary and relevant.</p>
+  </div>
+</section>
+
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
 
 </body>
 </html>
