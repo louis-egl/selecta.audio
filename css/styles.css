@@ -1,0 +1,157 @@
+:root {
+  --bg-dark: #1a0f0a;
+  --bg-grad: radial-gradient(circle at 30% 20%, #2a140c, #120805);
+  --gold: #d8a24a;
+  --gold-soft: #e8b36a;
+  --text-main: #ffffff;
+  --text-muted: #bfb8b2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg-grad);
+  color: var(--text-main);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 60px;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+nav .enquire {
+  padding: 10px 22px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #000;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 120px 20px 160px;
+}
+
+.hero .tag {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: 96px;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #000;
+  border-radius: 30px;
+}
+
+.btn-secondary {
+  padding: 14px 32px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 120px 80px;
+  gap: 80px;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.about h2 {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.about h1 {
+  font-size: 64px;
+  margin: 20px 0;
+}
+
+.about p {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* CONTACT */
+.contact {
+  background: #fff;
+  color: #000;
+  padding: 120px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.contact h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+.contact span {
+  color: var(--gold);
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.contact button {
+  padding: 16px 36px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  border: none;
+  cursor: pointer;
+}
